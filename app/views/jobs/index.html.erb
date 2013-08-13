@@ -1,0 +1,16 @@
+<h3>Jobs with Job Score between <%= @min_score %> and <%= @max_score %></h3> 
+
+<ul>
+  <% @jobs.each do |job| %>
+    <li>
+      <%= job.title %> at <%= job.company.name %> | Job score: <%= job.job_score %>
+      <br>
+      Employees of <%= job.company.name %>:
+      <ul>
+        <% job.company.employees.each do |emp| %>
+          <li><%= emp.first_name + " " + emp.last_name %></li>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>

@@ -1,0 +1,35 @@
+- Create a simple Rails application to handle a concept of a Scored Network Job.
+
+- There are three "objects" to consider - a User who works at a Company that has one or more Jobs open (User belongs to Company, that has many Jobs)
+
+- A User has a Strength Score - anywhere between 0 - 100.
+
+- Each Job has a Job Score - anywhere between 0 - 100.
+
+- The application should be allow someone to
+ 
+  a) Search for a User (something simple, not full text or anything fancy - maybe just First or Last Name) and see what Jobs are available at that User's Company sorted by Job Score
+
+  b) Given a starting User Strength score - say 45 for example, find all Jobs anywhere that are within 10 points on either side. For each such Job, you can show the Users that already work at the Company that the Job belongs to.
+
+------
+
+For example, imagine a system with 
+
+Users:
+
+Huey (10) works at Company Acme
+Dewey (35) works at Company Acme
+Louie (70) works at Company Mace
+
+Jobs:
+
+Acme has 3 Jobs - Lobbyist (20), Speaker (32), Talker (65)
+Mace has 2 Jobs - Sweeper (21), Shaker (71)
+
+- Searching for Huey - would give us Huey and Acme's Jobs
+- Enter a Score of 62 - would give us the Shaker Job (71) at Mace with Louie who works there and the Talker Job (65) at Acme with Huey/Dewey who work there
+
+-------
+
+Once again, I don't want this to turn into something that's a huge time sink - please make whatever assumptions you'd like to make, so that its short and simple. The user interface can be as barebones as you like - this is less about having a perfect elaborate solution, and more about understanding how you approach choices that need to be made.

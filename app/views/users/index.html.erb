@@ -1,0 +1,11 @@
+<h3><%= @user.first_name + " " + @user.last_name %> | <%= @user.strength_score %></h3> 
+
+<h4><%= @user.first_name %> works for <%= @user.company.name %></h4>
+
+<h4>Jobs available at <%= @user.company.name %>:</h4>
+
+<ul>
+  <% @user.company.jobs.each do |job| %>
+    <li><%= job.title %> | Job score: <%= job.job_score %></li>
+  <% end %>
+</ul>

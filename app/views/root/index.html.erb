@@ -1,0 +1,19 @@
+<div>
+  <h3>Search for a User</h3>
+
+  <form action="<%= users_url %>" method="get">
+    <input type="text" name="user[first_name]" placeholder="First name"> 
+    <br>or<br>
+    <input type="text" name="user[last_name]" placeholder="Last name">
+    <input type="submit" value="Search">
+  </form>
+</div>
+
+<div>
+  <h3>Search by Job Score</h3>
+
+  <form action="<%= jobs_url %>" method="get">
+    <input type="text" name="job_score" placeholder="Enter 1-100">
+    <input type="submit" value="Search">
+  </form>
+</div>
